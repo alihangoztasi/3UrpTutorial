@@ -392,7 +392,7 @@ MonoBehaviour:
   _playerTransform: {fileID: 1596001426}
   _orientationTransform: {fileID: 1909297519}
   _playerVisualTransform: {fileID: 8394164194574598921}
-  _rotationSpeed: 0
+  _rotationSpeed: 7
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1802,6 +1802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1596001426}
   - component: {fileID: 1596001429}
+  - component: {fileID: 1596001430}
   - component: {fileID: 1596001428}
   - component: {fileID: 1596001427}
   m_Layer: 0
@@ -1896,6 +1897,8 @@ MonoBehaviour:
   _jumpKey: 32
   _jumpForce: 8
   _jumpCoolDown: 0.5
+  _airMultiplier: 0.2
+  _airDrag: 0.75
   _canJump: 1
   _slideKey: 113
   _slideMultiplier: 2
@@ -1905,6 +1908,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _groundDrag: 5
+--- !u!114 &1596001430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596001425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841e4c4ca89104e4cb1a584edfdf24b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1909297518
 GameObject:
   m_ObjectHideFlags: 0
