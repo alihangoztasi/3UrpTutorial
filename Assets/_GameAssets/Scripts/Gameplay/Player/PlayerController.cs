@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public event Action<PlayerState> OnPlayerStateChanged;
     public event Action OnPlayerJumped;
 
     [Header("References")]
@@ -113,6 +114,7 @@ public class PlayerController : MonoBehaviour
         if (newState != currentState)
         {
             _stateController.ChangeState(newState);
+            OnPlayerStateChanged?.Invoke(newState);
         }
 
 
