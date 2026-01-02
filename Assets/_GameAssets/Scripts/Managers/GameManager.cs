@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         _currentEggCount++;
         _eggCounterUI.SetEggCounterText(_currentEggCount, _maxEggCount);
 
-        if(_currentEggCount == _maxEggCount)
+        if(_currentEggCount >= _maxEggCount)
         {
             //win
             _eggCounterUI.SetEggCompleted();
