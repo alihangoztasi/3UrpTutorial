@@ -1,0 +1,27 @@
+using System;
+using UnityEngine;
+using UnityEngine.Playables;
+
+public class TimeLineManager : MonoBehaviour
+{
+    [SerializeField] private GameManager _gameManager;
+
+    private PlayableDirector _playableDirector;
+
+    void Awake()
+    {
+        _playableDirector = GetComponent<PlayableDirector>();
+
+    }
+
+    void OnEnable()
+    {
+        _playableDirector.Play();
+        _playableDirector.stopped += OntTimeLineFinished;
+    }
+
+    private void OntTimeLineFinished(PlayableDirector director)
+    {
+        _gameManager.ChangeGameState(GameState.Play);
+    }
+}
